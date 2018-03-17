@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\InvoiceResource;
 use App\Invoice;
-use App\InvoiceDetail;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -33,7 +32,7 @@ class InvoiceController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @return InvoiceResource
+     * @return JsonResponse
      */
     public function store(Request $request)
     {
@@ -60,11 +59,17 @@ class InvoiceController extends Controller
                 ];
             }
 
-            InvoiceDetail::insert($lineItems);
+            $data = array([
+                'message' => 'New invoice created successfully'
+            ]);
 
-            return new InvoiceResource($invoice);
-
+        } else {
+            $data = array([
+                'message' => 'Invoice could not be created'
+            ]);
         }
+
+        return JsonResponse::create($data);
 
     }
 
@@ -100,8 +105,6 @@ class InvoiceController extends Controller
             $lines = request(['line_items']);
             $lineItems = $lines['line_items'];
 
-            return $lineItems;
-
             try {
                 foreach ($lineItems as $lineItem) {
                     $invoice->invoiceLineItems()->update($lineItem);
@@ -115,12 +118,16 @@ class InvoiceController extends Controller
             }
 
             $data = array([
-                'message' => 'Invoice Updated Successfully'
+                'message' => 'Invoice updated successfully'
             ]);
 
-            return JsonResponse::create($data);
-
+        } else {
+            $data = array([
+                'message' => 'Invoice could not be updated'
+            ]);
         }
+
+        return JsonResponse::create($data);
 
     }
 
@@ -128,17 +135,23 @@ class InvoiceController extends Controller
      * Remove the specified resource from storage.
      *
      * @param Invoice $invoice
-     * @return InvoiceResource
+     * @return JsonResponse
      * @throws \Exception
      */
     public function destroy(Invoice $invoice)
     {
 
         if ($invoice->delete()) {
-
-            return new InvoiceResource($invoice);
-
+            $data = array([
+                'message' => 'Invoice deleted successfully'
+            ]);
+        } else {
+            $data = array([
+                'message' => 'Invoice could not be deleted'
+            ]);
         }
+
+        return JsonResponse::create($data);
 
     }
 

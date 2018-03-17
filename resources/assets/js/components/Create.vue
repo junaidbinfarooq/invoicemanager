@@ -155,7 +155,7 @@
                 var vm = this;
                 axios.post('api/invoices', invoice)
                     .then(function (response) {
-                        vm.$router.push({path: '/', query: {alert: 'Invoice Added Successfully!'}})
+                        vm.$router.push({path: '/', query: {alert: 'Invoice created successfully!'}})
                     })
                     .catch(function (error) {
                         alert(error)

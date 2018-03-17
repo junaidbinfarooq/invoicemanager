@@ -162,11 +162,7 @@
                 let id = vm.$route.params.id;
                 axios.put('api/invoice/' + id, invoice)
                     .then(function (response) {
-                        //console.log('Success')
-                        //console.log(response);
-                        console.log(response.data);
-                        //console.log(response.data.data);
-                        //vm.$router.push({path: '/', query: {alert: 'Invoice with id='+id+ ' Updated Successfully!'}})
+                        vm.$router.push({path: '/', query: {alert: 'Invoice with id=' + id + ' updated successfully!'}})
                     })
                     .catch(function (error) {
                         alert(error)

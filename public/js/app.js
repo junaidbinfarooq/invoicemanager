@@ -280,6 +280,10 @@ webpackJsonp([1], {
 //
 //
 //
+//
+//
+//
+//
 
 
         /* harmony default export */
@@ -442,7 +446,7 @@ webpackJsonp([1], {
 
 
 // module
-        exports.push([module.i, "\ndiv#alertBox[data-v-11375e75]{\n\t    margin-right: 70px;\n}\n", ""]);
+        exports.push([module.i, "\ndiv#alertBox[data-v-11375e75] {\n    margin-right: 70px;\n}\n", ""]);
 
 // exports
 
@@ -661,7 +665,7 @@ webpackJsonp([1], {
 
 
 // module
-        exports.push([module.i, "\nnav[data-v-96baf55e]{\n\tpadding-top: inherit;\n}\n\n", ""]);
+        exports.push([module.i, "\nnav[data-v-96baf55e] {\n    padding-top: inherit;\n}\n\n", ""]);
 
 // exports
 
@@ -674,6 +678,10 @@ webpackJsonp([1], {
 
         "use strict";
         Object.defineProperty(__webpack_exports__, "__esModule", {value: true});
+//
+//
+//
+//
 //
 //
 //
@@ -817,7 +825,9 @@ webpackJsonp([1], {
                                 }
                             },
                             [
-                                _vm._v("\n\t\t\t\t" + _vm._s(_vm.current) + " \n\t\t\t\t"),
+                                _vm._v(
+                                    "\n                " + _vm._s(_vm.current) + "\n                "
+                                ),
                                 _c("span", {staticClass: "sr-only"}, [_vm._v("(current)")])
                             ]
                         )
@@ -919,7 +929,7 @@ webpackJsonp([1], {
                                 staticClass: "btn btn-primary btn-sm pull-right",
                                 attrs: {to: "/invoices/create"}
                             },
-                            [_vm._v("\n\t\t\t+ Add New Invoice\n\t\t")]
+                            [_vm._v("\n            + Add New Invoice\n        ")]
                         )
                     ],
                     1
@@ -1010,7 +1020,11 @@ webpackJsonp([1], {
                                                                                 staticClass: "btn btn-primary btn-sm",
                                                                                 attrs: {to: "/invoice/" + invoice.id}
                                                                             },
-                                                                            [_vm._v("View")]
+                                                                            [
+                                                                                _vm._v(
+                                                                                    "View\n                            "
+                                                                                )
+                                                                            ]
                                                                         )
                                                                     ],
                                                                     1
@@ -1183,7 +1197,7 @@ webpackJsonp([1], {
 
 
 // module
-        exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+        exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -1196,6 +1210,9 @@ webpackJsonp([1], {
 
         "use strict";
         Object.defineProperty(__webpack_exports__, "__esModule", {value: true});
+//
+//
+//
 //
 //
 //
@@ -1281,7 +1298,7 @@ webpackJsonp([1], {
                     axios.delete('/api/invoice/' + id).then(function (response) {
                         vm.$router.push({
                             path: '/',
-                            query: {alert: 'Invoice with id=' + id + ' Deleted Successfully!'}
+                            query: {alert: 'Invoice with id=' + id + ' deleted successfully!'}
                         });
                     }).catch(function (error) {
                         alert('An error occured: ' + error);
@@ -1322,7 +1339,9 @@ webpackJsonp([1], {
                     ),
                     _vm._v(" "),
                     _c("h1", {staticClass: "page-header text-center"}, [
-                        _vm._v("\n\t\t" + _vm._s(_vm.invoice.number) + "\n\t\t"),
+                        _vm._v(
+                            "\n            " + _vm._s(_vm.invoice.number) + "\n            "
+                        ),
                         _c(
                             "span",
                             {staticClass: "pull-right"},
@@ -1570,7 +1589,7 @@ webpackJsonp([1], {
 
 
 // module
-        exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+        exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -1677,10 +1696,27 @@ webpackJsonp([1], {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 // Import this component
-
 
 // Import date picker css
 
@@ -1738,7 +1774,7 @@ webpackJsonp([1], {
                     // Submit to Data to the remove server for data insertion
                     var vm = this;
                     axios.post('api/invoices', invoice).then(function (response) {
-                        vm.$router.push({path: '/', query: {alert: 'Invoice Added Successfully!'}});
+                        vm.$router.push({path: '/', query: {alert: 'Invoice created successfully!'}});
                     }).catch(function (error) {
                         alert(error);
                     });
@@ -2615,6 +2651,7 @@ webpackJsonp([1], {
                                                                     }
                                                                 })
                                                             ]),
+                                                            _vm._v(" "),
                                                             _c("td", [_vm._v("  ")]),
                                                             _vm._v(" "),
                                                             _c("td", [
@@ -2629,7 +2666,11 @@ webpackJsonp([1], {
                                                                             }
                                                                         }
                                                                     },
-                                                                    [_vm._v("X")]
+                                                                    [
+                                                                        _vm._v(
+                                                                            "\n                                        X\n                                    "
+                                                                        )
+                                                                    ]
                                                                 )
                                                             ])
                                                         ])
@@ -2881,7 +2922,7 @@ webpackJsonp([1], {
 
 
 // module
-        exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+        exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2988,10 +3029,28 @@ webpackJsonp([1], {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 // Import this component
-
 
 // Import date picker css
 
@@ -3053,11 +3112,10 @@ webpackJsonp([1], {
                     var vm = this;
                     var id = vm.$route.params.id;
                     axios.put('api/invoice/' + id, invoice).then(function (response) {
-                        //console.log('Success')
-                        //console.log(response);
-                        console.log(response.data);
-                        //console.log(response.data.data);
-                        //vm.$router.push({path: '/', query: {alert: 'Invoice with id='+id+ ' Updated Successfully!'}})
+                        vm.$router.push({
+                            path: '/',
+                            query: {alert: 'Invoice with id=' + id + ' updated successfully!'}
+                        });
                     }).catch(function (error) {
                         alert(error);
                     });
@@ -3458,6 +3516,7 @@ webpackJsonp([1], {
                                                                     }
                                                                 })
                                                             ]),
+                                                            _vm._v(" "),
                                                             _c("td", [_vm._v("  ")]),
                                                             _vm._v(" "),
                                                             _c("td", [
@@ -3472,7 +3531,11 @@ webpackJsonp([1], {
                                                                             }
                                                                         }
                                                                     },
-                                                                    [_vm._v("X")]
+                                                                    [
+                                                                        _vm._v(
+                                                                            "\n                                        X\n                                    "
+                                                                        )
+                                                                    ]
                                                                 )
                                                             ])
                                                         ])

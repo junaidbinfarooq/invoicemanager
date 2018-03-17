@@ -85,7 +85,7 @@
                 var vm = this;
                 axios.delete('/api/invoice/' + id)
                     .then(function (response) {
-                        vm.$router.push({path: '/', query: {alert: 'Invoice with id=' + id + ' Deleted Successfully!'}})
+                        vm.$router.push({path: '/', query: {alert: 'Invoice with id=' + id + ' deleted successfully!'}})
                     })
                     .catch(function (error) {
                         alert('An error occured: ' + error)
